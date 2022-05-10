@@ -64,7 +64,15 @@ function App() {
       <Child>Hi Folks!</Child>
       <br />
       <Child1>Welcome to my Random Color Generator!</Child1>
-      <p style={{ color: 'beige', fontFamily: 'courier,monospace' }}>{color}</p>
+      <div
+        style={{
+          color: 'beige',
+          fontFamily: 'courier,monospace',
+          backgroundColor: color,
+        }}
+      >
+        Generated Color: {color}
+      </div>
       <br />
       <br />
       <Button
@@ -77,6 +85,35 @@ function App() {
       <br />
       <br />
 
+      <br />
+      <p
+        style={{
+          color: 'beige',
+          fontFamily: 'courier,monospace',
+          backgroundColor: color,
+          fontWeight: 'bolder',
+          transition: 'all .8s ease',
+          marginLeft: '-720px',
+          fontSize: '30px',
+        }}
+      >
+        Change Color
+      </p>
+      <p
+        style={{
+          color: 'beige',
+          fontFamily: 'courier,monospace',
+          backgroundColor: color,
+          fontWeight: 'bolder',
+          transition: 'all .8s ease',
+          marginRight: '-640px',
+          marginTop: '-60px',
+          fontSize: '30px',
+        }}
+      >
+        Change Luminosity
+      </p>
+
       <input
         style={{
           fontFamily: 'courier,monospace',
@@ -87,22 +124,24 @@ function App() {
           color: 'white',
           borderRadius: '10px',
           flexGrow: '1',
-          marginLeft: '0px',
+
           fontWeight: 'bolder',
           fontSize: '1.8rem',
           lineHeight: '2.4rem',
           boxSizing: 'inherit',
           borderStyle: 'none',
           outline: 'normal',
-          margin: '0',
+          marginLeft: '-100px',
         }}
         onChange={(event) => {
           setHue(event.currentTarget.value);
         }}
         value={hue}
       />
+
       <input
         style={{
+          float: 'right',
           fontFamily: 'courier,monospace',
           fontWeight: 'bolder',
           backgroundColor: color,
@@ -118,6 +157,7 @@ function App() {
           borderStyle: 'none',
           outline: 'normal',
           margin: '0',
+          marginRight: '250px',
         }}
         onChange={(event) => {
           setLuminosity(event.currentTarget.value);
