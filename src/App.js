@@ -4,47 +4,47 @@ import styled from '@emotion/styled';
 import randomColor from 'randomcolor';
 import React, { useState } from 'react';
 
+const Button = styled.button`
+  padding: 15px;
+
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 10px;
+  font-size: 18px;
+  width: 140px;
+  border-radius: 10px;
+  border-style: none;
+  font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
+    'Menlo', 'Courier', 'monospace';
+  color: #e6fff3;
+  font-weight: normal;
+  &:hover {
+    color: white;
+  }
+`;
+const Child1 = styled.div`
+  color: #e6fff3;
+  font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
+    'Menlo', 'Courier', 'monospace';
+  font-weight: bold;
+  font-size: 25px;
+`;
+const Child = styled.div`
+  color: #e6fff3;
+  font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
+    'Menlo', 'Courier', 'monospace';
+  font-weight: bold;
+  font-size: 42px;
+`;
+
 function App() {
   const [color, setColor] = useState(randomColor());
   const [hue, setHue] = useState('');
   const [luminosity, setLuminosity] = useState('');
 
   // css styling
-
-  const Button = styled.button`
-    padding: 15px;
-
-    background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    );
-    border-radius: 10px;
-    font-size: 18px;
-    width: 140px;
-    border-radius: 10px;
-    border-style: none;
-    font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
-      'Menlo', 'Courier', 'monospace';
-    color: #e6fff3;
-    font-weight: normal;
-    &:hover {
-      color: white;
-    }
-  `;
-  const Child1 = styled.div`
-    color: #e6fff3;
-    font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
-      'Menlo', 'Courier', 'monospace';
-    font-weight: bold;
-    font-size: 25px;
-  `;
-  const Child = styled.div`
-    color: #e6fff3;
-    font-family: 'Dank Mono', 'SFMono-Regular,Consolas', 'Liberation Mono',
-      'Menlo', 'Courier', 'monospace';
-    font-weight: bold;
-    font-size: 42px;
-  `;
 
   return (
     <div
@@ -84,7 +84,7 @@ function App() {
       </Button>
       <br />
       <br />
-
+      -
       <br />
       <p
         style={{
@@ -113,7 +113,6 @@ function App() {
       >
         Change Luminosity
       </p>
-
       <input
         style={{
           fontFamily: 'courier,monospace',
@@ -138,7 +137,6 @@ function App() {
         }}
         value={hue}
       />
-
       <input
         style={{
           float: 'right',
